@@ -1,11 +1,8 @@
 import "./App.css";
 import { Component } from "react";
 
-import {CardList} from './components/card-list/card-list.component'
+import { CardList } from "./components/card-list/card-list.component";
 import { SearchBox } from "./components/search-box/search-box.component";
-// function App() {
-
-// }
 
 class App extends Component {
   constructor() {
@@ -14,8 +11,6 @@ class App extends Component {
       monsters: [],
       searchField: "",
     };
-
-    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -24,9 +19,9 @@ class App extends Component {
       .then((users) => this.setState({ monsters: users }));
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({ searchField: e.target.value });
-  }
+  };
 
   render() {
     const { monsters, searchField } = this.state;
