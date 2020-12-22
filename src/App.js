@@ -4,7 +4,7 @@ import { Component } from "react";
 import { CardList } from "./components/card-list/card-list.component";
 import { SearchBox } from "./components/search-box/search-box.component";
 
-class App extends Component {
+class App extends Component  {
   constructor() {
     super();
     this.state = {
@@ -30,6 +30,7 @@ class App extends Component {
     );
     return (
       <div className="App">
+        <h1> Monster Rolodx</h1>
         <SearchBox
           placeholder="Search monsters"
           handleChange={this.handleChange}
